@@ -1,0 +1,629 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home China; OS build 19042.1237; Version 2009; 64bit' Language: 'zh' Physical Memory: 16151 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Cancer_V/Desktop/2021网易Mini/2021MiniGame
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+65153
+Successfully changed project path to: C:/Users/Cancer_V/Desktop/2021网易Mini/2021MiniGame
+C:/Users/Cancer_V/Desktop/2021网易Mini/2021MiniGame
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 19.98 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.4f1 (0abb6314276a)
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Cancer_V/Desktop/2021网易Mini/2021MiniGame/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
+    Vendor:   
+    VRAM:     6023 MB
+    Driver:   27.21.14.6681
+Initialize mono
+Mono path[0] = 'D:/Program Files/Unity/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56108
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000933 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 22.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.298 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001038 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.667 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1123 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.3 MB.
+System memory in use after: 57.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1566.
+Total: 1.360300 ms (FindLiveObjects: 0.104400 ms CreateObjectMapping: 0.022500 ms MarkObjects: 1.162500 ms  DeleteObjects: 0.070100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/2DCharacter.unity
+  artifactKey: Guid(4968a9a7273f8a9448b27ce032bebe9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/2DCharacter.unity using Guid(4968a9a7273f8a9448b27ce032bebe9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6ba11dcc3eabfb81ab9e312ba90176f') in 0.010623 seconds
+  Import took 0.012510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 353.285374 seconds.
+  path: Assets/Textures
+  artifactKey: Guid(f653c2bfc7cf8d94986baa008616139a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(f653c2bfc7cf8d94986baa008616139a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb954ad4f4333615ed203efe500e34f0') in 0.002857 seconds
+  Import took 0.005176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.643712 seconds.
+  path: Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com.png
+  artifactKey: Guid(58c9ecf9409bfcb478442cca21903769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com.png using Guid(58c9ecf9409bfcb478442cca21903769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae7ce38f1744cb5ff602c5e6ad2bddab') in 0.113186 seconds
+  Import took 0.116090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.855444 seconds.
+  path: Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com.png
+  artifactKey: Guid(58c9ecf9409bfcb478442cca21903769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com.png using Guid(58c9ecf9409bfcb478442cca21903769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5f2704bbffbc124b8e92cc919f70cc') in 0.011429 seconds
+  Import took 0.014160 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000976 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.780 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 58.3 MB.
+System memory in use after: 58.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1606.
+Total: 1.639100 ms (FindLiveObjects: 0.234100 ms CreateObjectMapping: 0.051800 ms MarkObjects: 1.288100 ms  DeleteObjects: 0.063800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 145.114949 seconds.
+  path: Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com.png
+  artifactKey: Guid(58c9ecf9409bfcb478442cca21903769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com.png using Guid(58c9ecf9409bfcb478442cca21903769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5249f1a28b016d867bb7f9525103311') in 0.089395 seconds
+  Import took 0.091312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.706613 seconds.
+  path: Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_4.controller
+  artifactKey: Guid(8cca1d2b971c8b84f879ed840eb184ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_4.controller using Guid(8cca1d2b971c8b84f879ed840eb184ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cd736aa8713652e28c2d77a88d89fe0') in 0.016963 seconds
+  Import took 0.018886 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000843 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.697 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.4 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1624.
+Total: 1.996500 ms (FindLiveObjects: 0.224600 ms CreateObjectMapping: 0.043500 ms MarkObjects: 1.660700 ms  DeleteObjects: 0.065700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.473914 seconds.
+  path: Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_8.controller
+  artifactKey: Guid(f568a4b5036faca4badae2a5fb42f5db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_8.controller using Guid(f568a4b5036faca4badae2a5fb42f5db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b50a7f6b1610c0bcfe62cefa724bcdb8') in 0.009407 seconds
+  Import took 0.013136 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001002 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.626 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.16 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.4 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1627.
+Total: 1.194600 ms (FindLiveObjects: 0.095700 ms CreateObjectMapping: 0.023400 ms MarkObjects: 1.039300 ms  DeleteObjects: 0.035500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.351718 seconds.
+  path: Assets/Textures/left.anim
+  artifactKey: Guid(adf69c3d4ea956b4e9aa97a03b38a23b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/left.anim using Guid(adf69c3d4ea956b4e9aa97a03b38a23b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6101d21880eca961845cc607b66034c0') in 0.011940 seconds
+  Import took 0.013704 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001071 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.680 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1630.
+Total: 1.277800 ms (FindLiveObjects: 0.108600 ms CreateObjectMapping: 0.022300 ms MarkObjects: 1.090800 ms  DeleteObjects: 0.054900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.293552 seconds.
+  path: Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_0.controller
+  artifactKey: Guid(0cdf8b23976262e45b54864605141da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_0.controller using Guid(0cdf8b23976262e45b54864605141da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd634e2f074a86d2dcdf63ceae7a0163d') in 0.010415 seconds
+  Import took 0.012339 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000998 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.570 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1633.
+Total: 1.855100 ms (FindLiveObjects: 0.188100 ms CreateObjectMapping: 0.126800 ms MarkObjects: 1.479300 ms  DeleteObjects: 0.059500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000939 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.662 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1636.
+Total: 1.555200 ms (FindLiveObjects: 0.275400 ms CreateObjectMapping: 0.060500 ms MarkObjects: 1.159600 ms  DeleteObjects: 0.057800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 119.732648 seconds.
+  path: Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_0.controller
+  artifactKey: Guid(0cdf8b23976262e45b54864605141da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_0.controller using Guid(0cdf8b23976262e45b54864605141da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3f6a2d9e0cfb7bedfaaf7f6620262c8') in 0.011255 seconds
+  Import took 0.013141 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000988 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.668 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1639.
+Total: 1.251800 ms (FindLiveObjects: 0.111500 ms CreateObjectMapping: 0.022400 ms MarkObjects: 1.068400 ms  DeleteObjects: 0.048700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.350526 seconds.
+  path: Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_0.controller
+  artifactKey: Guid(0cdf8b23976262e45b54864605141da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/火影忍者-GBA像素风格-鸣人_爱给网_aigei_com_0.controller using Guid(0cdf8b23976262e45b54864605141da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6403c480faf3716327960d4888512c95') in 0.012489 seconds
+  Import took 0.014345 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001077 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.574 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1642.
+Total: 1.233300 ms (FindLiveObjects: 0.116700 ms CreateObjectMapping: 0.021300 ms MarkObjects: 1.048700 ms  DeleteObjects: 0.045900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001019 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.600 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1645.
+Total: 2.146500 ms (FindLiveObjects: 0.175000 ms CreateObjectMapping: 0.040300 ms MarkObjects: 1.773700 ms  DeleteObjects: 0.155900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001059 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.567 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1648.
+Total: 1.392600 ms (FindLiveObjects: 0.103100 ms CreateObjectMapping: 0.022800 ms MarkObjects: 1.218800 ms  DeleteObjects: 0.047200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 385.921863 seconds.
+  path: Assets/Textures/横版丛林冒险记2游戏素材+音效-水平清晰 Bg(levelC_爱给网_aigei_com.png
+  artifactKey: Guid(133dc15e3d8dbd446b39fff04f42783b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/横版丛林冒险记2游戏素材+音效-水平清晰 Bg(levelC_爱给网_aigei_com.png using Guid(133dc15e3d8dbd446b39fff04f42783b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36c020e75ac2e0bf652998089abdcc5d') in 0.034078 seconds
+  Import took 0.037308 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Textures/横版丛林冒险记2游戏素材+音效-静态(static)_爱给网_aigei_com.png
+  artifactKey: Guid(7e2240b8f969d2941b27ad9a02df3c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/横版丛林冒险记2游戏素材+音效-静态(static)_爱给网_aigei_com.png using Guid(7e2240b8f969d2941b27ad9a02df3c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a124098d25366878231c4c3cce52439') in 0.008750 seconds
+  Import took 0.010874 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001230 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.833 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1653.
+Total: 1.845800 ms (FindLiveObjects: 0.123100 ms CreateObjectMapping: 0.024200 ms MarkObjects: 1.613900 ms  DeleteObjects: 0.083400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 260.515962 seconds.
+  path: Assets/Scripts/2DCharacterController
+  artifactKey: Guid(bd5a42c4b3c8fd4468b233bc65f4abb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/2DCharacterController using Guid(bd5a42c4b3c8fd4468b233bc65f4abb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e427f2b266b90cb53c30a627afc6c56d') in 0.004910 seconds
+  Import took 0.006883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.958842 seconds.
+  path: Assets/Scripts/2DCharacterController/2DCharacterController.cs
+  artifactKey: Guid(ec60d20e8f4a62743aa83d3143492616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/2DCharacterController/2DCharacterController.cs using Guid(ec60d20e8f4a62743aa83d3143492616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b598c96d4211c008b70b09391e26052') in 0.016950 seconds
+  Import took 0.018839 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001093 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.655 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1656.
+Total: 1.673700 ms (FindLiveObjects: 0.248600 ms CreateObjectMapping: 0.079800 ms MarkObjects: 1.284200 ms  DeleteObjects: 0.059000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001229 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.597 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1659.
+Total: 1.645500 ms (FindLiveObjects: 0.188600 ms CreateObjectMapping: 0.039000 ms MarkObjects: 1.345000 ms  DeleteObjects: 0.071200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.356907 seconds.
+  path: Assets/Scripts/2DCharacterController/CharacterController.cs
+  artifactKey: Guid(dc2f765eb3ff22a478cde5895826ed3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/2DCharacterController/CharacterController.cs using Guid(dc2f765eb3ff22a478cde5895826ed3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e42f0068bf700d89a4da9c9c3048444e') in 0.004027 seconds
+  Import took 0.006039 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001053 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.594 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1153 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1663.
+Total: 1.727000 ms (FindLiveObjects: 0.120700 ms CreateObjectMapping: 0.023500 ms MarkObjects: 1.529200 ms  DeleteObjects: 0.052900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001107 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.587 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1152 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1665.
+Total: 1.450000 ms (FindLiveObjects: 0.118000 ms CreateObjectMapping: 0.024300 ms MarkObjects: 1.246300 ms  DeleteObjects: 0.060300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.101723 seconds.
+  path: Assets/Scripts/2DCharacterController/PlayerMovement.cs
+  artifactKey: Guid(714beae6954907240b3bdb80c75d0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/2DCharacterController/PlayerMovement.cs using Guid(714beae6954907240b3bdb80c75d0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f4510632c5db3117e150c127b15bf1') in 0.004112 seconds
+  Import took 0.005955 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000883 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.624 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1153 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.6 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1669.
+Total: 1.697100 ms (FindLiveObjects: 0.172500 ms CreateObjectMapping: 0.042100 ms MarkObjects: 1.425600 ms  DeleteObjects: 0.055800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.852697 seconds.
+  path: Assets/Scripts/2DCharacterController/PlayerMovement.cs
+  artifactKey: Guid(714beae6954907240b3bdb80c75d0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/2DCharacterController/PlayerMovement.cs using Guid(714beae6954907240b3bdb80c75d0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92294c36cbeb834e6282456f9d71c2cb') in 0.004606 seconds
+  Import took 0.006635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019267 seconds.
+  path: Assets/Scripts/2DCharacterController/PlayerMovement.cs
+  artifactKey: Guid(714beae6954907240b3bdb80c75d0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/2DCharacterController/PlayerMovement.cs using Guid(714beae6954907240b3bdb80c75d0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92294c36cbeb834e6282456f9d71c2cb') in 0.002492 seconds
+  Import took 0.004471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.345011 seconds.
+  path: Assets/Scripts/2DCharacterController/PlayerMovement.cs
+  artifactKey: Guid(714beae6954907240b3bdb80c75d0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/2DCharacterController/PlayerMovement.cs using Guid(714beae6954907240b3bdb80c75d0dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74def767e862fd1a07a7c873b750b0df') in 0.002404 seconds
+  Import took 0.004326 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001030 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.715 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1153 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.6 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1672.
+Total: 3.073700 ms (FindLiveObjects: 0.178800 ms CreateObjectMapping: 0.030300 ms MarkObjects: 2.766000 ms  DeleteObjects: 0.097100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001450 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.604 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1153 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.6 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1675.
+Total: 1.334800 ms (FindLiveObjects: 0.120600 ms CreateObjectMapping: 0.023900 ms MarkObjects: 1.113700 ms  DeleteObjects: 0.075100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001049 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.590 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1153 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.6 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1678.
+Total: 2.104100 ms (FindLiveObjects: 0.149100 ms CreateObjectMapping: 0.029600 ms MarkObjects: 1.849500 ms  DeleteObjects: 0.074100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001007 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.599 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1153 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.6 MB.
+System memory in use after: 61.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1681.
+Total: 1.570800 ms (FindLiveObjects: 0.211100 ms CreateObjectMapping: 0.056400 ms MarkObjects: 1.239700 ms  DeleteObjects: 0.062700 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
