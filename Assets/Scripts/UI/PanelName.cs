@@ -24,10 +24,13 @@ public class PanelName
     public static string choicebutton = "choicebutton";
     public static string choicequestion = "choicequestion";
 
+    //name of InteractiveButtonPanel
+    public static string InteractiveButtonPanel = "InteractiveButtonPanel";
+
     //continue key
     public static KeyCode continuekey = KeyCode.Space;
 
-    
+    public static KeyCode interactivekey = KeyCode.E;
 
 }
 
