@@ -7,5 +7,8 @@ using UnityEngine;
 /// </summary>
 public class EventName
 {
+    //玩家丢弃物品后的事件
     public static string enemypatroldisturbance = "enemypatroldisturbance";
+    //玩家按下交互键
+    public static string interactivebuttonclicked = "interactivebuttonclicked";
 }

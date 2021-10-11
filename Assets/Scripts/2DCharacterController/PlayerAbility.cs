@@ -5,10 +5,17 @@ using UnityEngine;
 public class PlayerAbility : MonoBehaviour
 {
     [Header("投掷距离")]
-    [Range(0,2)] public float range;
+    [Range(1,10)] public float range;
 
-    public bool armed { get; set; }
+    private bool armed;
+    private BulletTrajectory trajectory;
 
+
+    public void SetArmed()
+    {
+        trajectory=VFXManager.GetInstance().PlayandGetVFX<BulletTrajectory>(VFXName.BulletTrajectory);
+        armed = true;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +26,35 @@ public class PlayerAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(armed&&Input.GetMouseButtonDown(0))
+        //待改进
+        if(armed)
         {
-            //从光心到指定像素方向上的一条射线(起点为近裁平面位置)
-            Ray ray=Camera.main.ScreenPointToRay(Input.mousePosition);
+            trajectory.startpoint = transform.position;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if(Physics.Raycast(ray,out hit))
             {
-                EventCenter.GetInstance().EventTrigger<Vector3>(EventName.enemypatroldisturbance, hit.point);
-                armed = false;
+                Vector3 dir = hit.point - transform.position;
+                trajectory.endpoint = (dir.magnitude <= range) ? hit.point : transform.position + dir.normalized * range;
+                if (hit.transform.gameObject.layer==LayerName.terriainlayer)
+                {
+                    trajectory.SetMaterial(true);
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        EventCenter.GetInstance().EventTrigger<Vector3>(EventName.enemypatroldisturbance, trajectory.endpoint);
+                        armed = false;
+                        Destroy(trajectory.gameObject);
+                        trajectory = null;
+                    }
+                }
+                else
+                {
+                    trajectory.SetMaterial(false);
+                }
+            }
+            else
+            {
+                trajectory.endpoint = transform.position;
             }
         }
     }

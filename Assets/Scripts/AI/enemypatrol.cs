@@ -17,6 +17,7 @@ public class enemypatrol : MonoBehaviour
     //是否启用到点计时
     public bool enablearrivewait;
 
+    
     NavMeshAgent navmeshagent;
     bool isdisturbed;
     int currentindex;
@@ -56,7 +57,7 @@ public class enemypatrol : MonoBehaviour
     void Update()
     {
         //被干扰
-        if(isdisturbed)
+        if (isdisturbed)
         {
             if(currentdisturbwaittime>=disturbwaittime)
             {
@@ -83,11 +84,23 @@ public class enemypatrol : MonoBehaviour
         {
             if(currentwaypointwaittime>=waypointwaittime)
             {
-                currentindex = (currentindex + 1) % waypoints.Length;
+                //currentindex = (currentindex + 1) % waypoints.Length;//按顺序循环
+                currentindex = Random.Range(0, waypoints.Length);//随机选择
                 navmeshagent.SetDestination(waypoints[currentindex].position);
                 currentwaypointwaittime = 0;
             }
             currentwaypointwaittime += Time.deltaTime;
         }
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, alertrange);
+    }
+
+    private void OnDestroy()
+    {
+        EventCenter.GetInstance().RemoveEventListener<Vector3>(EventName.enemypatroldisturbance, SetDisturbance);
     }
 }

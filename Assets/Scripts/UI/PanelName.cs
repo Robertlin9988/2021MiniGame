@@ -36,7 +36,7 @@ public class PanelName
 
 
 /// <summary>
-/// 记录动画状态机的一些参数变量名
+/// 记录对话状态机的一些参数变量名
 /// </summary>
 public class AnimParam
 {
