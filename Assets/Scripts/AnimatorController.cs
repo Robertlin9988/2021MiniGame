@@ -8,11 +8,25 @@ using UnityEngine;
 /// </summary>
 public class AnimParms
 {
-    //是否移动的参数
+    /// <summary>
+    /// 是否移动的参数
+    /// </summary>
     public static string IsWalking = "IsWalking";
 
-    //门开关触发器
+    /// <summary>
+    /// 门开关触发器
+    /// </summary>
     public static string triggerdoor = "triggerdoor";
+
+    /// <summary>
+    /// 蹲下状态
+    /// </summary>
+    public static string IsCouching = "IsCouching";
+
+    /// <summary>
+    /// 拾取与放下东西
+    /// </summary>
+    public static string Pickup = "Armed";
 }
 
 

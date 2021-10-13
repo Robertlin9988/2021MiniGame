@@ -25,6 +25,7 @@ public class enemyattack : MonoBehaviour
         float ang = Vector3.Angle(transform.forward, dir);
         if(distance<= atkradius && ang<= atkangle/2)
         {
+            UIManager.GetInstance().HideALLPanel();
             EventCenter.GetInstance().Clear();
             SceneManager.LoadScene(0);
         }

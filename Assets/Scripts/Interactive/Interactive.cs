@@ -9,24 +9,19 @@ using UnityEngine.Events;
 /// </summary>
 public class Interactive : MonoBehaviour
 {
-    protected bool istrigger = false;
+
 
     public virtual void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag=="Player")
         {
             UIManager.GetInstance().ShowPanel<InteractiveButtonPanel>(PanelName.InteractiveButtonPanel);
-            istrigger = true;
         }
     }
 
     public virtual void OnTriggerStay(Collider other)
     {
-        if (istrigger && Input.GetKey(PanelName.interactivekey))
-        {
-            UIManager.GetInstance().HidePanel(PanelName.InteractiveButtonPanel);
-            EventCenter.GetInstance().EventTrigger<Collider>(EventName.interactivebuttonclicked,other);
-        }
+        
     }
 
 
@@ -35,7 +30,6 @@ public class Interactive : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             UIManager.GetInstance().HidePanel(PanelName.InteractiveButtonPanel);
-            istrigger = false;
         }
     }
 }

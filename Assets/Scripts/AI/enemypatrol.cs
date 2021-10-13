@@ -17,12 +17,16 @@ public class enemypatrol : MonoBehaviour
     //是否启用到点计时
     public bool enablearrivewait;
 
+    [Header("超时时间")]
+    public float maxwaittime;
+
     
     NavMeshAgent navmeshagent;
     bool isdisturbed;
     int currentindex;
     float currentwaypointwaittime;
     float currentdisturbwaittime;
+    float currentwaittime;
 
     /// <summary>
     /// 重置干扰点
@@ -56,11 +60,23 @@ public class enemypatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(currentwaittime>=maxwaittime)
+        {
+            isdisturbed = false;
+            currentdisturbwaittime = 0;
+            currentwaypointwaittime = 0;
+            currentwaittime = 0;
+            currentindex = Random.Range(0, waypoints.Length);//随机选择
+            navmeshagent.SetDestination(waypoints[currentindex].position);
+        }
+        currentwaittime += Time.deltaTime;
+
         //被干扰
         if (isdisturbed)
         {
             if(currentdisturbwaittime>=disturbwaittime)
             {
+                currentwaittime = 0;
                 isdisturbed = false;
                 navmeshagent.SetDestination(waypoints[currentindex].position);
             }
@@ -84,6 +100,7 @@ public class enemypatrol : MonoBehaviour
         {
             if(currentwaypointwaittime>=waypointwaittime)
             {
+                currentwaittime = 0;
                 //currentindex = (currentindex + 1) % waypoints.Length;//按顺序循环
                 currentindex = Random.Range(0, waypoints.Length);//随机选择
                 navmeshagent.SetDestination(waypoints[currentindex].position);
@@ -97,10 +114,5 @@ public class enemypatrol : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, alertrange);
-    }
-
-    private void OnDestroy()
-    {
-        EventCenter.GetInstance().RemoveEventListener<Vector3>(EventName.enemypatroldisturbance, SetDisturbance);
     }
 }

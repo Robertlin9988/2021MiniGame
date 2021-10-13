@@ -97,8 +97,10 @@ public class EventCenter : BaseManager<EventCenter>
     /// <param name="action">对应之前添加的委托函数</param>
     public void RemoveEventListener<T>(string name, UnityAction<T> action)
     {
-        if (eventdic.ContainsKey(name))
+        if (eventdic.ContainsKey(name) && (eventdic[name] as EventInfo<T>) != null)
             (eventdic[name] as EventInfo<T>).actions -= action;
+        else
+            Debug.LogError("RemoveEventListener<T> failed!");
     }
 
     /// <summary>
@@ -108,8 +110,10 @@ public class EventCenter : BaseManager<EventCenter>
     /// <param name="action"></param>
     public void RemoveEventListener(string name, UnityAction action)
     {
-        if (eventdic.ContainsKey(name))
+        if (eventdic.ContainsKey(name) && (eventdic[name] as EventInfo) != null)
             (eventdic[name] as EventInfo).actions -= action;
+        else
+            Debug.LogError("RemoveEventListener failed!");
     }
 
     /// <summary>
@@ -118,12 +122,18 @@ public class EventCenter : BaseManager<EventCenter>
     /// <param name="name">哪一个名字的事件触发了</param>
     public void EventTrigger<T>(string name, T info)
     {
-        //有没有对应的事件监听
-        //有的情况
+        //有没有对应的事件监听且类型转换成功
         if (eventdic.ContainsKey(name))
         {
-            if ((eventdic[name] as EventInfo<T>).actions != null)
-                (eventdic[name] as EventInfo<T>).actions.Invoke(info);
+            if((eventdic[name] as EventInfo<T>) != null)
+            {
+                if ((eventdic[name] as EventInfo<T>).actions != null)
+                    (eventdic[name] as EventInfo<T>).actions.Invoke(info);
+            }
+            else
+            {
+                Debug.LogError(name+"EventTrigger<T> failed!");
+            }
         }
     }
 
@@ -133,12 +143,18 @@ public class EventCenter : BaseManager<EventCenter>
     /// <param name="name"></param>
     public void EventTrigger(string name)
     {
-        //有没有对应的事件监听
-        //有的情况
+        //有没有对应的事件监听且类型转换成功
         if (eventdic.ContainsKey(name))
         {
-            if ((eventdic[name] as EventInfo).actions != null)
-                (eventdic[name] as EventInfo).actions.Invoke();
+            if((eventdic[name] as EventInfo) != null)
+            {
+                if ((eventdic[name] as EventInfo).actions != null)
+                    (eventdic[name] as EventInfo).actions.Invoke();
+            }
+            else
+            {
+                Debug.LogError(name+"EventTrigger failed!");
+            }
         }
     }
 

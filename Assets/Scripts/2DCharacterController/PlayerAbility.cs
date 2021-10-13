@@ -11,7 +11,7 @@ public class PlayerAbility : MonoBehaviour
     private BulletTrajectory trajectory;
 
 
-    public void SetArmed()
+    public void SetArmed(GameObject obj)
     {
         trajectory=VFXManager.GetInstance().PlayandGetVFX<BulletTrajectory>(VFXName.BulletTrajectory);
         armed = true;
@@ -20,23 +20,38 @@ public class PlayerAbility : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         //待改进
-        if(armed)
+        if (armed)
         {
             trajectory.startpoint = transform.position;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if(Physics.Raycast(ray,out hit))
+            if(Physics.Raycast(ray,out hit,Mathf.Infinity,1<<LayerName.terriainlayer))
             {
+                //判断是否穿墙及计算终点位置
                 Vector3 dir = hit.point - transform.position;
-                trajectory.endpoint = (dir.magnitude <= range) ? hit.point : transform.position + dir.normalized * range;
-                if (hit.transform.gameObject.layer==LayerName.terriainlayer)
+                Vector3 endpoint= (dir.magnitude <= range) ? hit.point : transform.position + dir.normalized * range;
+                int layer = hit.transform.gameObject.layer;
+                ray = new Ray(transform.position+transform.up, dir);
+                if(Physics.Raycast(ray,out hit,range,1<<LayerName.walllayer))
+                {
+                    Debug.Log("hit wall!");
+                    layer = LayerName.walllayer;
+                    trajectory.endpoint = hit.point;
+                }
+                else
+                {
+                    trajectory.endpoint = endpoint;
+                }
+
+                //判断层级
+                if (layer == LayerName.terriainlayer)
                 {
                     trajectory.SetMaterial(true);
                     if (Input.GetMouseButtonDown(0))

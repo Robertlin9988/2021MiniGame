@@ -85,6 +85,15 @@ public class UIManager : BaseManager<UIManager>
         }
     }
 
+    public void HideALLPanel()
+    {
+        for(int i=0;i<canvas.childCount;i++)
+        {
+            paneldic.Clear();
+            canvas.GetChild(i).gameObject.SetActive(false);
+        }
+    }
+
     public T GetPanel<T>(string name) where T:BasePanel
     {
         if (paneldic.ContainsKey(name))
