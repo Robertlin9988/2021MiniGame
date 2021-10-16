@@ -18,6 +18,8 @@ public class ThirdPersonPlayerMovement : MonoBehaviour
     float horizontal;
     float vertical;
 
+    public bool canmove { get; set; }
+
 
 
     // Start is called before the first frame update
@@ -25,6 +27,7 @@ public class ThirdPersonPlayerMovement : MonoBehaviour
     {
         character_anim = GetComponent<Animator>();
         m_Rigidbody = GetComponent<Rigidbody>();
+        canmove = true;
     }
 
     // Update is called once per frame
@@ -50,7 +53,10 @@ public class ThirdPersonPlayerMovement : MonoBehaviour
 
     void OnAnimatorMove()
     {
-        m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * character_anim.deltaPosition.magnitude* movespeed);
-        m_Rigidbody.MoveRotation(m_Rotation);
+        if(canmove)
+        {
+            m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * character_anim.deltaPosition.magnitude * movespeed);
+            m_Rigidbody.MoveRotation(m_Rotation);
+        }
     }
 }

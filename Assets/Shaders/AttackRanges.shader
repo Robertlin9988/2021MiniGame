@@ -30,12 +30,16 @@ Shader "Custom/AttackRanges"
 
 			
 			int _pointnum;
-			float4 _circlePos[3];
+			float4 _selfcirclePos[3];
 			float _circleRadius[3];
 			float4 _Color;
 			float _angle[3];
 			float4 _forward[3];
 			//sampler2D _DataTexture;
+
+			uniform float4 _circlePos;
+			uniform float _insidecircleRadius;
+			uniform float _outercircleRadius;
 
 
 			struct appdata
@@ -61,9 +65,18 @@ Shader "Custom/AttackRanges"
 			fixed4 frag(v2f i) : SV_Target
 			{
 				float2 worldpos = float2(i.worldpos.x, i.worldpos.z);
+
+
+				float2 insidecirclepos = float2(_circlePos.x, _circlePos.z);
+				float2 insidedisvec = insidecirclepos - worldpos;
+				float insidedis = length(insidedisvec);
+
+				float alpha = step(insidedis / _insidecircleRadius, 1);
+
+
 				for (int i = 0; i < _pointnum; i++)
 				{
-					float2 circlepos = float2(_circlePos[i].x, _circlePos[i].z);
+					float2 circlepos = float2(_selfcirclePos[i].x, _selfcirclePos[i].z);
 					float2 forwarddir = float2(_forward[i].x, _forward[i].z);
 					float2 disvec = circlepos - worldpos;
 					float dis = length(disvec);
@@ -72,7 +85,7 @@ Shader "Custom/AttackRanges"
 					{
 						continue;
 					}
-					_Color.a = dis / _circleRadius[i] * 0.5;
+					_Color.a = dis / _circleRadius[i] * 0.5 * alpha;
 					return _Color;
 
 					////必须用lod否则循环无法展开报错

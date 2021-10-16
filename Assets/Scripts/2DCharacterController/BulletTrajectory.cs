@@ -137,12 +137,12 @@ public class BulletTrajectory : BaseVFX
             Vector3 tmppoint = BezierUtils.CalculateCubicBezierPoint(i / (float)pointnum, startpoint, controlpoint, endpoint);
             trajectory.SetPosition(i, tmppoint);
         }
-        projectioncircle.SetVector("_circlePos", new Vector4(endpoint.x, endpoint.y, endpoint.z, 1));
+        projectioncircle.SetVector("_selfcirclePos", new Vector4(endpoint.x, endpoint.y, endpoint.z, 1));
     }
 
     private void OnDestroy()
     {
         projectioncircle.SetFloat("_circleRadius", 0);
-        projectioncircle.SetVector("_circlePos", new Vector4(0, 0, 0, 1));
+        projectioncircle.SetVector("_selfcirclePos", new Vector4(0, 0, 0, 1));
     }
 }

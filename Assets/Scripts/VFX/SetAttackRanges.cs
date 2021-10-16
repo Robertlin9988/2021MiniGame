@@ -27,7 +27,7 @@ public class SetAttackRanges : MonoBehaviour
         }
         ranges.SetFloatArray("_circleRadius", circleRadius);
         ranges.SetFloatArray("_angle", circleangle);
-        ranges.SetVectorArray("_circlePos", circlepos);
+        ranges.SetVectorArray("_selfcirclePos", circlepos);
         ranges.SetVectorArray("_forward", forwarddir);
         #region texture
         //Texture2D datatexture = new Texture2D(2, 3);//一个像素存4个float值 以texture形式传递
@@ -49,7 +49,7 @@ public class SetAttackRanges : MonoBehaviour
             circlepos[i] = enemypatrols[i].transform.position;
             forwarddir[i] = enemypatrols[i].transform.forward;
         }
-        ranges.SetVectorArray("_circlePos", circlepos);
+        ranges.SetVectorArray("_selfcirclePos", circlepos);
         ranges.SetVectorArray("_forward", forwarddir);
     }
 

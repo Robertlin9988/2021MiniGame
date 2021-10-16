@@ -147,4 +147,5 @@ MonoBehaviour:
   errormaterial: {fileID: 2100000, guid: e6398f7f9dcb7264b930e01e9d525682, type: 2}
   correctmaterial: {fileID: 2100000, guid: 63651020a3f8ac94e94b73e7e632c544, type: 2}
   projectioncircle: {fileID: 2100000, guid: cf23cdca77f74064d8cc0a0f3470d630, type: 2}
-  circleradius: 2
+  circleradius: 1
+  circlewidth: 5
