@@ -28,6 +28,6 @@ public class CrouchState : StateData
     public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         EventCenter.GetInstance().RemoveEventListener(EventName.crouchbuttonclicked, InputDetect);
-        anim.SetBool(AnimParms.IsCouching, false);
+        //anim.SetBool(AnimParms.IsCouching, false);
     }
 }

@@ -79,6 +79,7 @@ public class DialogState : StateMachineBehaviour
         if (Input.GetKeyDown(PanelName.continuekey)&&currentindex<sentences.Count)
         {
             UIManager.GetInstance().ShowPanel<DialoguePanel>(PanelName.dialoguepanel, SetDialogInfo);
+            AudioManager.GetInstance().PlaySFX(AudiosName.continuebutton);
         }
     }
 

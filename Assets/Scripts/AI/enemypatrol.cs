@@ -34,6 +34,7 @@ public class enemypatrol : MonoBehaviour
     /// <param name="targetpoint">干扰点位置坐标</param>
     public void SetDisturbance(Vector3 targetpoint)
     {
+        Debug.Log(targetpoint);
         //判断是否处于警戒半径内
         float dis = Vector3.Distance(transform.position, targetpoint);
         if(dis<=alertrange)
@@ -76,8 +77,10 @@ public class enemypatrol : MonoBehaviour
         {
             if(currentdisturbwaittime>=disturbwaittime)
             {
+                Debug.Log("arrive disturbance");
                 currentwaittime = 0;
                 isdisturbed = false;
+                EventCenter.GetInstance().EventTrigger(EventName.enemyarrivedisturbance);
                 navmeshagent.SetDestination(waypoints[currentindex].position);
             }
 

@@ -10,7 +10,7 @@ public class ThirdPersonPlayerMovement : MonoBehaviour
 
 
     Animator character_anim;
-    Rigidbody m_Rigidbody;
+    CharacterController m_Rigidbody;
     Vector3 m_Movement;
     Vector3 movedir;
     Quaternion m_Rotation = Quaternion.identity;
@@ -26,7 +26,7 @@ public class ThirdPersonPlayerMovement : MonoBehaviour
     void Start()
     {
         character_anim = GetComponent<Animator>();
-        m_Rigidbody = GetComponent<Rigidbody>();
+        m_Rigidbody = GetComponent<CharacterController>();
         canmove = true;
     }
 
@@ -55,8 +55,8 @@ public class ThirdPersonPlayerMovement : MonoBehaviour
     {
         if(canmove)
         {
-            m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * character_anim.deltaPosition.magnitude * movespeed);
-            m_Rigidbody.MoveRotation(m_Rotation);
+            m_Rigidbody.Move(m_Movement * character_anim.deltaPosition.magnitude * movespeed);
+            transform.rotation=m_Rotation;
         }
     }
 }

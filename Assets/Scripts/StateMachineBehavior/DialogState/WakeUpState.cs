@@ -46,18 +46,18 @@ public class WakeUpState : StateMachineBehaviour
         {
             postprocessprofile.GetSetting<Vignette>().center.value = new Vector2(0.5f, 0.5f);
         }
-        if(curindex>= vignetteparms.Length)
+        if (curindex >= vignetteparms.Length)
         {
             return;
         }
-        float targettime = vignetteparms[curindex].timestep+ darktime;
+        float targettime = vignetteparms[curindex].timestep + darktime;
         float targetintensity = vignetteparms[curindex].vignetteintensity;
         float targetdizzle = vignetteparms[curindex].Dizzleintensity;
         float curvalue = postprocessprofile.GetSetting<Vignette>().intensity.value;
         float curdizzle = postprocessprofile.GetSetting<DepthOfField>().focalLength.value;
-        postprocessprofile.GetSetting<Vignette>().intensity.value = Mathf.Lerp(lastparm.vignetteintensity, targetintensity, (currenttime-lastparm.timestep)/(targettime-lastparm.timestep));
+        postprocessprofile.GetSetting<Vignette>().intensity.value = Mathf.Lerp(lastparm.vignetteintensity, targetintensity, (currenttime - lastparm.timestep) / (targettime - lastparm.timestep));
         postprocessprofile.GetSetting<DepthOfField>().focalLength.value = Mathf.Lerp(lastparm.Dizzleintensity, targetdizzle, (currenttime - lastparm.timestep) / (targettime - lastparm.timestep));
-        if (currenttime> targettime)
+        if (currenttime > targettime)
         {
             lastparm.vignetteintensity = targetintensity;
             lastparm.timestep = targettime;

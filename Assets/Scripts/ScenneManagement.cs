@@ -1,18 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+
+/// <summary>
+/// 场景管理单例
+/// </summary>
 public class ScenneManagement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private static ScenneManagement instance;
+    public static ScenneManagement GetInstance() => instance;
+
+
+    private void Awake()
     {
-        
+        instance = this;
+        //DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadSceneAdditive(int index)
     {
-        
+        EventCenter.GetInstance().EventTrigger(EventName.sceneload);
+        SceneManager.LoadScene(index, LoadSceneMode.Additive);
+    }
+
+    public void LoadSceneSingle(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+
+
+    public void UnloadScene(int index)
+    {
+        EventCenter.GetInstance().EventTrigger(EventName.sceneunload);
+        SceneManager.UnloadSceneAsync(index);
     }
 }

@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc:
   - name: A
-    faceimg: {fileID: 21300000, guid: d2b5f8cc594b73644a17d2375b36f498, type: 3}
+    faceimg: {fileID: 21300000, guid: e661c85da6a8e724eb21c07fc7949b0c, type: 3}
+  - name: "\u8001\u677F"
+    faceimg: {fileID: 159266380071375020, guid: 58c9ecf9409bfcb478442cca21903769, type: 3}

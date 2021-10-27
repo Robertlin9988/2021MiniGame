@@ -50,7 +50,7 @@ public class IdleArmed : StateData
         trajectory.startpoint = animator.transform.position;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit,Mathf.Infinity,~(1 << LayerName.triggerlayer)))
         {
             //ÅÐ¶ÏÊÇ·ñ´©Ç½¼°¼ÆËãÖÕµãÎ»ÖÃ
             Vector3 dir = hit.point - animator.transform.position;

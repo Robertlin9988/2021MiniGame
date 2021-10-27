@@ -20,3 +20,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 783270f721a36df4186aede87d0c3ee0, type: 3}
   - name: washingwater
     clip: {fileID: 8300000, guid: 04fd5340e2e3bcf468b53546a16d3408, type: 3}
+  - name: continuebutton
+    clip: {fileID: 8300000, guid: f68fff87b80614c4099bed4f15108ff6, type: 3}
+  - name: metrosound
+    clip: {fileID: 8300000, guid: cffc18971afb85c4cae45afec163446a, type: 3}
+  - name: ruinbgm
+    clip: {fileID: 8300000, guid: f04174edfbe86f44ca7a13b613af80f6, type: 3}
+  - name: walkstep
+    clip: {fileID: 8300000, guid: 3c9f2dbdfc81e704ca474b95d6146361, type: 3}
+  - name: door
+    clip: {fileID: 8300000, guid: bf1bb003563913f4a83524f54bf853a7, type: 3}

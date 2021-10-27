@@ -23,7 +23,7 @@ public class UIManager : BaseManager<UIManager>
             return;
         }
         canvas = canvasobj.transform as RectTransform;
-        //GameObject.DontDestroyOnLoad(canvasobj);
+        GameObject.DontDestroyOnLoad(canvasobj);
 
         GameObject eventsysobj = GameObject.Find(PanelName.eventsys);
         if (eventsysobj == null)
@@ -31,7 +31,7 @@ public class UIManager : BaseManager<UIManager>
             Debug.LogError("EventSystem not exist!");
             return;
         }
-        //GameObject.DontDestroyOnLoad(eventsysobj);
+        GameObject.DontDestroyOnLoad(eventsysobj);
     }
 
 

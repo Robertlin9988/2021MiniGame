@@ -27,6 +27,9 @@ public class PanelName
     //name of InteractiveButtonPanel
     public static string InteractiveButtonPanel = "InteractiveButtonPanel";
 
+    //name of paperpanel
+    public static string paperpanel = "paperpanel";
+
     //continue key
     public static KeyCode continuekey = KeyCode.Space;
 

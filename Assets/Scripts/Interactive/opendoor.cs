@@ -6,6 +6,11 @@ public class opendoor : Interactive
 {
     //对应的门的动画
     public Animator m_anim;
+    public bool playercanopen=false;
+    public float closetome;
+
+    private bool dooropened = false;
+    private float currentopentime;
 
     /// <summary>
     /// 玩家按键开门事件
@@ -13,7 +18,10 @@ public class opendoor : Interactive
     /// <param name="other"></param>
     void OpenDoor()
     {
+        UIManager.GetInstance().HidePanel(PanelName.InteractiveButtonPanel);
         m_anim.SetTrigger(AnimParms.triggerdoor);
+        dooropened = true;
+        currentopentime = 0;
         EventCenter.GetInstance().RemoveEventListener(EventName.interactivebuttonclicked, OpenDoor);
     }
 
@@ -23,39 +31,51 @@ public class opendoor : Interactive
     void EnemyOpen()
     {
         m_anim.SetTrigger(AnimParms.triggerdoor);
+        dooropened = true;
+        currentopentime = 0;
+    }
+
+    void CloseDoor()
+    {
+        m_anim.SetTrigger(AnimParms.triggerdoor);
+        dooropened = false;
+        currentopentime = 0;
     }
 
     public override void OnTriggerEnter(Collider other)
     {
         //Debug.Log("open door enter");
-        base.OnTriggerEnter(other);
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && playercanopen)
         {
+            base.OnTriggerEnter(other);
             EventCenter.GetInstance().AddEventListener(EventName.interactivebuttonclicked, OpenDoor);
         }
         else if(other.gameObject.tag=="enemy")
         {
-            EnemyOpen();
+            if(!dooropened)
+                EnemyOpen();
         }
-    }
-
-    public override void OnTriggerStay(Collider other)
-    {
-        //Debug.Log("open door stay");
-        base.OnTriggerStay(other);
     }
 
     public override void OnTriggerExit(Collider other)
     {
         //Debug.Log("open door exit");
-        base.OnTriggerExit(other);
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && playercanopen)
         {
+            base.OnTriggerExit(other);
             EventCenter.GetInstance().RemoveEventListener(EventName.interactivebuttonclicked, OpenDoor);
         }
-        else if (other.gameObject.tag == "enemy")
+    }
+
+    private void Update()
+    {
+        if(dooropened)
         {
-            EnemyOpen();
+            currentopentime += Time.deltaTime;
+            if(currentopentime> closetome)
+            {
+                CloseDoor();
+            }
         }
     }
 }

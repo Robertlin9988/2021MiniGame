@@ -19,9 +19,17 @@ public class ThirdCharacterController : MonoBehaviour
     float vertical;
     bool isWalking;
 
-    public bool canmove { get; set; }
+    public bool canmove;
 
+    public void SetCanmove(bool state)
+    {
+        canmove = state;
+    }
 
+    public void SetPosition(Vector3 pos)
+    {
+        m_Rigidbody.Move(pos - transform.position);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +43,8 @@ public class ThirdCharacterController : MonoBehaviour
     void Update()
     {
         //所有input都应该放在update中
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        horizontal = 0;//Input.GetAxis("Horizontal");
+        vertical = Mathf.Clamp01(Input.GetAxis("Vertical"));
         if (m_Rigidbody.isGrounded)
         {
             m_Movement= transform.TransformDirection(new Vector3(horizontal,0, vertical));
@@ -51,7 +59,7 @@ public class ThirdCharacterController : MonoBehaviour
         m_Rotation = Quaternion.LookRotation(desiredForward);
         bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);
         bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
-        isWalking = hasHorizontalInput || hasVerticalInput;
+        isWalking = canmove && (hasHorizontalInput || hasVerticalInput);
         character_anim.SetBool(AnimParms.IsWalking, isWalking);
     }
 

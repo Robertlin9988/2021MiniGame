@@ -2014,6 +2014,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 776429267547217251, guid: a74fbd924e60ef54880f837ab367d71e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300024, guid: 216ab329157c2694aa4d9c28fe6f85d3, type: 3}
+    - target: {fileID: 776429267547217251, guid: a74fbd924e60ef54880f837ab367d71e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2d3e7afbfe1c66445945edba5475eb39, type: 2}
     - target: {fileID: 776429268976534198, guid: a74fbd924e60ef54880f837ab367d71e, type: 3}
       propertyPath: m_Name
       value: Aisha
@@ -2205,7 +2213,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d55e5a8dd7f6514db50e776fee3ec31, type: 2}
+  - {fileID: 2100000, guid: 2d3e7afbfe1c66445945edba5475eb39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4663,7 +4671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1172582053731241796
 GameObject:
   m_ObjectHideFlags: 0
