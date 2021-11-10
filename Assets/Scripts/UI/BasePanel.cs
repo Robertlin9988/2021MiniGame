@@ -24,14 +24,35 @@ public class BasePanel : MonoBehaviour
         SetChidrenComponents<Button>();
         SetChidrenComponents<Image>();
         SetChidrenComponents<Text>();
+        SetChidrenComponents<Slider>();
+        SetChidrenComponents<Toggle>();
         SetChidrenComponents<GridLayoutGroup>();
         SetTMProcomponent();
     }
 
 
 
-    //按钮点击事件虚函数由子类实现
+    //btn按钮点击事件虚函数由子类实现
     protected virtual void OnClick(string name)
+    {
+        Debug.Log(name + " OnClick");
+        AudioManager.GetInstance().PlaySFX(AudiosName.buttonclicked);
+    }
+
+    //其他组件点击事件
+    protected virtual void OnClick(GameObject obj)
+    {
+        Debug.Log(obj.name + " OnMouseClick");
+        AudioManager.GetInstance().PlaySFX(AudiosName.buttonclicked);
+    }
+
+    protected virtual void OnMouseEnter(GameObject obj)
+    {
+        Debug.Log(obj.name + " OnMOuseEnter");
+        AudioManager.GetInstance().PlaySFX(AudiosName.continuebutton);
+    }
+
+    protected virtual void OnMouseExit(GameObject obj)
     {
 
     }
@@ -93,13 +114,25 @@ public class BasePanel : MonoBehaviour
                 uicomponents.Add(name, new List<UIBehaviour>() { component });
             }
 
-            //如果是按钮控件则添加点击监听
+            //如果是按钮控件则添加鼠标进入事件 (MouseEnter) 和鼠标滑出事件 (MouseExit) 及点击事件（Onclick）
             if (component is Button)
             {
                 (component as Button).onClick.AddListener(() =>
                 {
                     OnClick(name);
                 });
+
+                UIEventListener btnListener = component.gameObject.AddComponent<UIEventListener>();
+                btnListener.OnMouseEnter += OnMouseEnter;
+                btnListener.OnMouseExit += OnMouseExit;
+            }
+
+            if(component is Toggle)
+            {
+                UIEventListener togListener = component.gameObject.AddComponent<UIEventListener>();
+                togListener.OnMouseEnter += OnMouseEnter;
+                togListener.OnMouseExit += OnMouseExit;
+                togListener.OnClick += OnClick;
             }
         }
     }

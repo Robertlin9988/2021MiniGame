@@ -28,6 +28,21 @@ public class EventInfo<T> : IEventInfo
 }
 
 /// <summary>
+/// 带两个参数的委托
+/// </summary>
+/// <typeparam name="T1"></typeparam>
+/// <typeparam name="T2"></typeparam>
+public class EventInfo<T1,T2>:IEventInfo
+{
+    public UnityAction<T1,T2> actions;
+
+    public EventInfo(UnityAction<T1,T2> action)
+    {
+        actions += action;
+    }
+}
+
+/// <summary>
 /// 不带参数的委托
 /// </summary>
 public class EventInfo : IEventInfo
@@ -71,6 +86,28 @@ public class EventCenter : BaseManager<EventCenter>
     }
 
     /// <summary>
+    /// 添加带两个参数的事件监听
+    /// </summary>
+    /// <typeparam name="T1"></typeparam>
+    /// <typeparam name="T2"></typeparam>
+    /// <param name="name"></param>
+    /// <param name="action"></param>
+    public void AddEventListener<T1,T2>(string name, UnityAction<T1,T2> action)
+    {
+        //有没有对应的事件监听
+        //有的情况
+        if (eventdic.ContainsKey(name))
+        {
+            (eventdic[name] as EventInfo<T1,T2>).actions += action;
+        }
+        //没有的情况
+        else
+        {
+            eventdic.Add(name, new EventInfo<T1,T2>(action));
+        }
+    }
+
+    /// <summary>
     /// 添加不带参数的事件监听
     /// </summary>
     /// <param name="name"></param>
@@ -91,7 +128,7 @@ public class EventCenter : BaseManager<EventCenter>
     }
 
     /// <summary>
-    /// 移除对应的事件监听
+    /// 移除对应的一个参数事件监听
     /// </summary>
     /// <param name="name">事件的名字</param>
     /// <param name="action">对应之前添加的委托函数</param>
@@ -101,6 +138,19 @@ public class EventCenter : BaseManager<EventCenter>
             (eventdic[name] as EventInfo<T>).actions -= action;
         else
             Debug.LogError("RemoveEventListener<T> failed!");
+    }
+
+    /// <summary>
+    /// 移除对应的两个参数事件监听
+    /// </summary>
+    /// <param name="name">事件的名字</param>
+    /// <param name="action">对应之前添加的委托函数</param>
+    public void RemoveEventListener<T1,T2>(string name, UnityAction<T1,T2> action)
+    {
+        if (eventdic.ContainsKey(name) && (eventdic[name] as EventInfo<T1,T2>) != null)
+            (eventdic[name] as EventInfo<T1,T2>).actions -= action;
+        else
+            Debug.LogError("RemoveEventListener<T1,T2> failed!");
     }
 
     /// <summary>
@@ -133,6 +183,27 @@ public class EventCenter : BaseManager<EventCenter>
             else
             {
                 Debug.LogError(name+"EventTrigger<T> failed!");
+            }
+        }
+    }
+
+    /// <summary>
+    /// 事件触发两个参数
+    /// </summary>
+    /// <param name="name">哪一个名字的事件触发了</param>
+    public void EventTrigger<T1,T2>(string name, T1 info,T2 info2)
+    {
+        //有没有对应的事件监听且类型转换成功
+        if (eventdic.ContainsKey(name))
+        {
+            if ((eventdic[name] as EventInfo<T1,T2>) != null)
+            {
+                if ((eventdic[name] as EventInfo<T1,T2>).actions != null)
+                    (eventdic[name] as EventInfo<T1,T2>).actions.Invoke(info,info2);
+            }
+            else
+            {
+                Debug.LogError(name + "EventTrigger<T1,T2> failed!");
             }
         }
     }

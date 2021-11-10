@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
     private void Respawn(){
         //SceneTool.Instance.ReloadScene();
-        ScenneManagement.GetInstance().LoadSceneSingle(4);
+        ScenneManagement.GetInstance().LoadSceneSingle(5);
     }
     private void Jump(){
         if(Physics2D.Raycast(transform.position,Vector2.down,0.5f,ground)&&jump){

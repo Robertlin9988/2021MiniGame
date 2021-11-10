@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22a1c3cfde531f4f8b2c8bf52144993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timelinename: 4
   state: 0
 --- !u!1102 &-4962089813324109983
 AnimatorState:
@@ -371,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22a1c3cfde531f4f8b2c8bf52144993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timelinename: 4
   state: 0
 --- !u!1102 &-2235825781777830693
 AnimatorState:
@@ -684,6 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22a1c3cfde531f4f8b2c8bf52144993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timelinename: 4
   state: 0
 --- !u!1101 &832071328642925496
 AnimatorStateTransition:
@@ -1057,22 +1060,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postprocessprofile: {fileID: 11400000, guid: f13ada2dda467ae4498cbe209337602b, type: 2}
   vignetteparms:
-  - timestep: 0.8
+  - timestep: 1
     vignetteintensity: 0.5
     Dizzleintensity: 150
-  - timestep: 1.6
+  - timestep: 2
     vignetteintensity: 1
     Dizzleintensity: 300
-  - timestep: 2.5
+  - timestep: 3
     vignetteintensity: 0.4
     Dizzleintensity: 150
-  - timestep: 3.5
-    vignetteintensity: 0.6
-    Dizzleintensity: 200
   - timestep: 5
+    vignetteintensity: 1
+    Dizzleintensity: 200
+  - timestep: 6
     vignetteintensity: 0
     Dizzleintensity: 1
-  darktime: 0
+  darktime: 1
 --- !u!1101 &5615445138269091236
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1349,7 +1352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundname:
   - soundname: 4
-    volume: 1
+    volume: 0.2
     isloop: 1
     stoponexit: 0
 --- !u!1101 &9024795575590785212

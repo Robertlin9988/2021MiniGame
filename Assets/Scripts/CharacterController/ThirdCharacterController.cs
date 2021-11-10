@@ -21,14 +21,37 @@ public class ThirdCharacterController : MonoBehaviour
 
     public bool canmove;
 
+    /// <summary>
+    /// should be initialized by birthpoints
+    /// </summary>
+    private Vector3 initialpos;
+    private Quaternion initialrotation;
+
+    public GameObject[] birthpoints;
+
+
     public void SetCanmove(bool state)
     {
         canmove = state;
     }
 
-    public void SetPosition(Vector3 pos)
+    private void Awake()
     {
-        m_Rigidbody.Move(pos - transform.position);
+        int index = 0;
+        if(PlayerPrefs.HasKey(savesettings.birthpoint))
+        {
+            index = PlayerPrefs.GetInt(savesettings.birthpoint);
+        }
+        if(birthpoints.Length>0)
+        {
+            initialpos = birthpoints[index].transform.position;
+            initialrotation = birthpoints[index].transform.rotation;
+        }
+        else
+        {
+            initialpos = transform.position;
+            initialrotation = transform.rotation;
+        }
     }
 
     // Start is called before the first frame update
@@ -37,6 +60,9 @@ public class ThirdCharacterController : MonoBehaviour
         character_anim = GetComponent<Animator>();
         m_Rigidbody = GetComponent<CharacterController>();
         canmove = true;
+        //≥ı ºªØŒª÷√
+        m_Rigidbody.Move(initialpos - transform.position);
+        transform.rotation = initialrotation;
     }
 
     // Update is called once per frame

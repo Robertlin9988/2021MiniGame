@@ -178,6 +178,17 @@ public class AudioManager : BaseManagerMono<AudioManager>
         }
     }
 
+    public void StopAll()
+    {
+        if(backgroundsource!=null) backgroundsource.Stop();
+        for (int i = 0; i < sfxsources.Count; i++)
+        {
+            var item = sfxsources.ElementAt(i);
+            GameObject.Destroy(item.Value);
+            sfxsources.Remove(item.Key);
+        }
+    }
+
 
     private void Update()
     {

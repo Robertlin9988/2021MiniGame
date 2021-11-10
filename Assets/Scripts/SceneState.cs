@@ -4,14 +4,13 @@ using UnityEngine;
 
 
 /// <summary>
+/// 挂载在不销毁场景的根物体上
 /// 管理基础场景状态的脚本 通过Onenable 和 Ondisable 管理进出场景时执行的操作
 /// </summary>
 public class SceneState : MonoBehaviour
 {
-    /// <summary>
-    /// 添加加载和卸载场景的事件
-    /// </summary>
-    private void OnEnable()
+
+    private void Awake()
     {
         EventCenter.GetInstance().AddEventListener(EventName.sceneload, () =>
         {
@@ -21,6 +20,14 @@ public class SceneState : MonoBehaviour
         {
             this.gameObject.SetActive(true);
         });
+    }
+
+
+    /// <summary>
+    /// 添加加载和卸载场景的事件
+    /// </summary>
+    private void OnEnable()
+    {
         OperaManager.GetInstance().SetStateTrans();
         Debug.Log("enter");
     }

@@ -83,5 +83,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _circlePos: {r: 21.08379, g: 0.0000009536743, b: 5.738151, a: 1}
-    - _forward: {r: 0.0040127193, g: 0, b: 0.99999195, a: 1}
+    - _forward: {r: -0.5870191, g: 0, b: -0.8095732, a: 1}
   m_BuildTextureStacks: []

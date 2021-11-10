@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: DistortionMirror2
   m_Shader: {fileID: 4800000, guid: 76a61c8b4b165484badeab9d71ad3075, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 0.125, y: 0.25}
         m_Offset: {x: 0, y: 0}
     - _BurnMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 94a15458ae87919458a147617ffc1924, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MirrorTex:
-        m_Texture: {fileID: 8400000, guid: 6d9be6a9217f2ee4d9a94124ef90f3a1, type: 2}
+        m_Texture: {fileID: 2800000, guid: 98f850c435d61b0449b7e474d77a6e5b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
@@ -102,5 +102,5 @@ Material:
     - _BurnSecondColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TintColor: {r: 0, g: 0.30980393, b: 0.61960787, a: 1}
+    - _TintColor: {r: 0.7264151, g: 0.31980535, b: 0.31980535, a: 1}
   m_BuildTextureStacks: []

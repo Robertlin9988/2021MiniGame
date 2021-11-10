@@ -34,8 +34,7 @@ public class SceneTrigger : Interactive
             postprocessprofile.GetSetting<ColorGrading>().postExposure.value = Mathf.Lerp(startexposure,targetexposure,currenttime/changeseonds);
             if(currenttime>= changeseonds)
             {
-                ScenneManagement.GetInstance().LoadSceneAdditive(sceneindex);
-                Destroy(this.gameObject);
+                ScenneManagement.GetInstance().LoadSceneSingle(sceneindex);
             }
             currenttime += 0.02f;
         }

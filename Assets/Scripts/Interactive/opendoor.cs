@@ -20,7 +20,7 @@ public class opendoor : Interactive
     {
         UIManager.GetInstance().HidePanel(PanelName.InteractiveButtonPanel);
         m_anim.SetTrigger(AnimParms.triggerdoor);
-        dooropened = true;
+        dooropened = !dooropened;
         currentopentime = 0;
         EventCenter.GetInstance().RemoveEventListener(EventName.interactivebuttonclicked, OpenDoor);
     }
@@ -71,11 +71,16 @@ public class opendoor : Interactive
     {
         if(dooropened)
         {
+            m_anim.transform.GetComponent<MeshCollider>().isTrigger = true;
             currentopentime += Time.deltaTime;
             if(currentopentime> closetome)
             {
                 CloseDoor();
             }
+        }
+        else
+        {
+            m_anim.transform.GetComponent<MeshCollider>().isTrigger = false;
         }
     }
 }

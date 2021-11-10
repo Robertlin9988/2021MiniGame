@@ -17,6 +17,8 @@ public class openbox : Interactive
         if(haskey)
         {
             TimelineManager.GetInstance().PlayTimeline(withkey);
+            PlayerPrefs.SetInt(savesettings.birthpoint, 2);
+            PlayerPrefs.SetString(savesettings.operastatename, "FirstSceneFinish");
         }
         else
         {

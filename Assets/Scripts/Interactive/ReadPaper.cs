@@ -7,22 +7,42 @@ using UnityEngine.UI;
 public class ReadPaper : Interactive
 {
     public PlayableDirector anim;
-    private ThirdCharacterController playercontroller;
+    private bool papershow=false;
 
-    void SetPaperShow()
+    public void Setpapershow(bool state)
     {
-        EventCenter.GetInstance().RemoveEventListener(EventName.interactivebuttonclicked, SetPaperShow);
-        EventCenter.GetInstance().AddEventListener(EventName.interactivebuttonclicked, SetPaperHide);
-        UIManager.GetInstance().HidePanel(PanelName.InteractiveButtonPanel);
-        TimelineManager.GetInstance().PlayTimeline(anim);
-        playercontroller.SetCanmove(false);
+        papershow = state;
     }
 
-    void SetPaperHide()
+
+    void PaperShow()
     {
-        EventCenter.GetInstance().RemoveEventListener(EventName.interactivebuttonclicked, SetPaperHide);
-        TimelineManager.GetInstance().ResumeTimeLine();
-        playercontroller.SetCanmove(true);
+        //动画未播放完不响应按键
+        if(!papershow && anim.state!=PlayState.Playing)
+        {
+            Debug.Log(gameObject.name+" Play!");
+            EventCenter.GetInstance().RemoveEventListener(EventName.interactivebuttonclicked, PaperShow);
+            //CharacterState.GetThirdPersonControl().canmove = false;
+            UIManager.GetInstance().HidePanel(PanelName.InteractiveButtonPanel);
+            TimelineManager.GetInstance().PlayTimeline(anim);
+            papershow = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (papershow)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (anim.playableGraph.GetRootPlayable(0).GetSpeed() <= 0.01d)
+                {
+                    //CharacterState.GetThirdPersonControl().canmove = false;
+                    TimelineManager.GetInstance().ResumeTimeLine(anim);
+                    papershow = false;
+                }
+            }
+        }
     }
 
     public override void OnTriggerEnter(Collider other)
@@ -30,8 +50,8 @@ public class ReadPaper : Interactive
         base.OnTriggerEnter(other);
         if (other.gameObject.tag == "Player")
         {
-            EventCenter.GetInstance().AddEventListener(EventName.interactivebuttonclicked, SetPaperShow);
-            playercontroller = other.gameObject.GetComponent<ThirdCharacterController>();
+            Debug.Log("enter");
+            EventCenter.GetInstance().AddEventListener(EventName.interactivebuttonclicked, PaperShow);
         }
     }
 
@@ -40,7 +60,8 @@ public class ReadPaper : Interactive
         base.OnTriggerExit(other);
         if (other.gameObject.tag == "Player")
         {
-            EventCenter.GetInstance().RemoveEventListener(EventName.interactivebuttonclicked, SetPaperShow);
+            Debug.Log("exit");
+            EventCenter.GetInstance().RemoveEventListener(EventName.interactivebuttonclicked, PaperShow);
         }
     }
 }

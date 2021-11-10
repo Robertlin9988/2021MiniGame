@@ -53,6 +53,23 @@ public class PoolData
 
         return obj;
     }
+
+
+    public GameObject GetObj(Vector3 pos,Quaternion rotation)
+    {
+        GameObject obj = null;
+        //取出第一个
+        obj = poolList[0];
+        poolList.RemoveAt(0);
+        obj.transform.position = pos;
+        obj.transform.rotation = rotation;
+        //激活 让其显示
+        obj.SetActive(true);
+        //断开了父子关系
+        obj.transform.parent = null;
+
+        return obj;
+    }
 }
 
 /// <summary>
@@ -83,6 +100,29 @@ public class PoolMgr : BaseManager<PoolMgr>
         {
             //GameObject obj = GameObject.Instantiate(Resources.Load<GameObject>(name));
             GameObject obj = ResManager.GetInstance().Load<GameObject>(name);
+            //把对象名字改的和池子名字一样
+            obj.name = name;
+            callBack(obj);
+        }
+    }
+
+
+    /// <summary>
+    /// 往外拿东西
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
+    public void GetObj(string name,Vector3 pos,Quaternion rotation,UnityAction<GameObject> callBack)
+    {
+        //有抽屉 并且抽屉里有东西
+        if (poolDic.ContainsKey(name) && poolDic[name].poolList.Count > 0)
+        {
+            callBack(poolDic[name].GetObj(pos,rotation));
+        }
+        else
+        {
+            //GameObject obj = GameObject.Instantiate(Resources.Load<GameObject>(name));
+            GameObject obj = ResManager.GetInstance().Load<GameObject>(name,pos,rotation);
             //把对象名字改的和池子名字一样
             obj.name = name;
             callBack(obj);

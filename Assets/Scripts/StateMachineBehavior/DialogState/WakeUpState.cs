@@ -41,7 +41,7 @@ public class WakeUpState : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        currenttime += Time.fixedDeltaTime;
+        currenttime += Time.deltaTime;
         if (currenttime > darktime)
         {
             postprocessprofile.GetSetting<Vignette>().center.value = new Vector2(0.5f, 0.5f);

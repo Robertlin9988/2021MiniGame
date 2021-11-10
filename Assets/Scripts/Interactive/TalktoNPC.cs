@@ -13,7 +13,7 @@ public enum Dialogname
 public class TalktoNPC : Interactive
 {
     public Dialogname dialogname;
-    private ThirdCharacterController playercontroller;
+    private ThirdPersonControl playercontroller;
 
     void Resumeplayermovement()
     {
@@ -39,7 +39,7 @@ public class TalktoNPC : Interactive
         if (other.gameObject.tag == "Player")
         {
             EventCenter.GetInstance().AddEventListener(EventName.interactivebuttonclicked, SetTalk);
-            playercontroller = other.gameObject.GetComponent<ThirdCharacterController>();
+            playercontroller = other.gameObject.GetComponent<ThirdPersonControl>();
         }
     }
 

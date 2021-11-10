@@ -5,7 +5,6 @@ using UnityEngine.Playables;
 
 public class TouchMirror : Interactive
 {
-    public Material mirror;
     public PlayableDirector opera;
 
 

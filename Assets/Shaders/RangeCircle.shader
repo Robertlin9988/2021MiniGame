@@ -33,7 +33,8 @@ Shader "Custom/Circle" {
 
 
 		float4 _MainTex_ST;
-			v2f vert(appdata_base v) {
+
+		v2f vert(appdata_base v) {
 			v2f o;
 			o.pos = UnityObjectToClipPos(v.vertex);
 			o.oPos = v.vertex;

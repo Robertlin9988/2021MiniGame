@@ -39,7 +39,7 @@ public class InputMgr : BaseManagerMono<InputMgr>
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         keydic = Resources.Load(InputKeys.fileName) as InputKeys;
         if (keydic == null) Debug.LogError("Key profile object not set!");

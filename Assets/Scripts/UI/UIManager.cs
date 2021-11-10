@@ -87,10 +87,14 @@ public class UIManager : BaseManager<UIManager>
 
     public void HideALLPanel()
     {
-        for(int i=0;i<canvas.childCount;i++)
+        //未被清除的情况下
+        if(canvas!=null)
         {
-            paneldic.Clear();
-            canvas.GetChild(i).gameObject.SetActive(false);
+            for (int i = 0; i < canvas.childCount; i++)
+            {
+                paneldic.Clear();
+                canvas.GetChild(i).gameObject.SetActive(false);
+            }
         }
     }
 

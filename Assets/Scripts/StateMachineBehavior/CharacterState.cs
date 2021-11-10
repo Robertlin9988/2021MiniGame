@@ -8,6 +8,8 @@ public class CharacterState : StateMachineBehaviour
     public List<StateData> ListAbilityData = new List<StateData>();
 
     private static ThirdPersonPlayerMovement playercontroller;
+    private static ThirdPersonControl thirdcontroller;
+    private static Shooting shootability;
     private static Animator anim;
 
 
@@ -15,6 +17,8 @@ public class CharacterState : StateMachineBehaviour
     {
         if (anim == null) anim = animator;
         if (playercontroller == null) playercontroller = animator.gameObject.GetComponent<ThirdPersonPlayerMovement>();
+        if (thirdcontroller == null) thirdcontroller = animator.gameObject.GetComponent <ThirdPersonControl> ();
+        if (shootability == null) shootability = animator.gameObject.GetComponent<Shooting>();
 
         foreach (StateData d in ListAbilityData)
         {
@@ -42,6 +46,19 @@ public class CharacterState : StateMachineBehaviour
     {
         if (playercontroller == null) Debug.LogError("playercontroller not found!");
         return playercontroller;
+    }
+
+    public static ThirdPersonControl GetThirdPersonControl()
+    {
+        if (thirdcontroller == null) Debug.LogWarning("playercontroller not found!");
+        return thirdcontroller;
+    }
+
+
+    public static Shooting GetShootAbility()
+    {
+        if (shootability == null) Debug.LogError("shootability not found!");
+        return shootability;
     }
 
     public static Animator GetAnimator()

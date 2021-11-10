@@ -19,3 +19,13 @@ MonoBehaviour:
     key: 99
   - eventname: 2
     key: 323
+  - eventname: 3
+    key: 32
+  - eventname: 4
+    key: 323
+  - eventname: 5
+    key: 324
+  - eventname: 6
+    key: 304
+  - eventname: 7
+    key: 27

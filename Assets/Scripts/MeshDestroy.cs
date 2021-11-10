@@ -18,7 +18,7 @@ public class MeshDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButtonDown(0))
         {
             //explode();
             Break();
@@ -53,9 +53,13 @@ public class MeshDestroy : MonoBehaviour
     {
         foreach(GameObject obj in fractured)
         {
-            obj.SetActive(true);
-            Destroy(obj, 2);
+            GetComponent<BoxCollider>().enabled = false;
+            PoolMgr.GetInstance().GetObj("Words/ัง" + "ห้", transform.position, Quaternion.identity, (o) => {
+            });
+            //obj.SetActive(true);
+            gameObject.SetActive(false);
+            //Destroy(obj, 2);
         }
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }

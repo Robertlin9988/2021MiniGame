@@ -30,3 +30,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 3c9f2dbdfc81e704ca474b95d6146361, type: 3}
   - name: door
     clip: {fileID: 8300000, guid: bf1bb003563913f4a83524f54bf853a7, type: 3}
+  - name: charged
+    clip: {fileID: 8300000, guid: 960e7580e022ef14ca615e586f3524b0, type: 3}
+  - name: fallhit
+    clip: {fileID: 8300000, guid: 85bf5984488d61947a5d39739d4290be, type: 3}
+  - name: playerhurt
+    clip: {fileID: 8300000, guid: 167d60cd65726924b838568dee5b9389, type: 3}
+  - name: buttonclicked
+    clip: {fileID: 8300000, guid: ab98bc913c3936246b6fadc761b66ff9, type: 3}

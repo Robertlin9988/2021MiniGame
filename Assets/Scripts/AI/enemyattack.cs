@@ -26,7 +26,7 @@ public class enemyattack : MonoBehaviour
         if(distance<= atkradius && ang<= atkangle/2)
         {
             UIManager.GetInstance().HideALLPanel();
-            ScenneManagement.GetInstance().LoadSceneSingle(3);
+            ScenneManagement.GetInstance().LoadSceneSingle(SceneManager.GetActiveScene().buildIndex);
             EventCenter.GetInstance().Clear();
         }
     }

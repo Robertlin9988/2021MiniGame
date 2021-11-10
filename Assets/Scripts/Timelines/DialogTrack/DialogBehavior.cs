@@ -18,8 +18,6 @@ public class DialogBehavior : PlayableBehaviour
     [Header("是否需要玩家确认")]
     public bool pauseafterdialog;
 
-    private SentencePanel sentencepanel;
-
     /// <summary>
     /// 当前片段是否正在播放
     /// </summary>
@@ -34,10 +32,10 @@ public class DialogBehavior : PlayableBehaviour
     private PlayableDirector director;
 
 
-    void SetDialogueInfo()
+    void SetDialogueInfo(SentencePanel o)
     {
-        sentencepanel.GetComponent<Text>(PanelName.content).text = dialoguecontent;
-        sentencepanel.GetComponent<Text>(PanelName.content).fontSize = textsize;
+        o.GetComponent<Text>(PanelName.content).text = dialoguecontent;
+        o.GetComponent<Text>(PanelName.content).fontSize = textsize;
     }
 
 
@@ -48,7 +46,6 @@ public class DialogBehavior : PlayableBehaviour
     public override void OnPlayableCreate(Playable playable)
     {
         director = playable.GetGraph().GetResolver() as PlayableDirector;
-        sentencepanel = GameObject.Find("Canvastmp").transform.Find("sentencepanel").GetComponent<SentencePanel>();
     }    
 
     /// <summary>
@@ -66,7 +63,7 @@ public class DialogBehavior : PlayableBehaviour
             if (pauseafterdialog)
                 ispauseschedule = true;
             isclipplay = true;
-            SetDialogueInfo();
+            UIManager.GetInstance().ShowPanel<SentencePanel>(PanelName.sentencepanel, SetDialogueInfo);
         }
     }
 
@@ -80,6 +77,7 @@ public class DialogBehavior : PlayableBehaviour
     /// <param name="info"></param>
     public override void OnBehaviourPause(Playable playable, FrameData info)
     {
+        if (isclipplay) UIManager.GetInstance().HidePanel(PanelName.sentencepanel);
         isclipplay = false;
         Debug.Log("Pause");
         if(ispauseschedule)
@@ -87,6 +85,5 @@ public class DialogBehavior : PlayableBehaviour
             ispauseschedule = false;
             TimelineManager.GetInstance().PauseTimeLine(director);
         }
-        SetDialogueInfo();
     }
 }

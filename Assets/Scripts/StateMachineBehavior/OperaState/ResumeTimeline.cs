@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ResumeTimeline : StateMachineBehaviour
 {
+    public timelinename timelinename;
+
     public enum resumestate
     {
         resumeonenter, resumeonexit
@@ -13,13 +15,13 @@ public class ResumeTimeline : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(state==resumestate.resumeonenter)
-            TimelineManager.GetInstance().ResumeTimeLine();
+            TimelineManager.GetInstance().ResumeTimeline(timelinename.ToString());
     }
 
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(state == resumestate.resumeonexit)
-            TimelineManager.GetInstance().ResumeTimeLine();
+            TimelineManager.GetInstance().ResumeTimeline(timelinename.ToString());
     }
 }

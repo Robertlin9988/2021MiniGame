@@ -27,6 +27,23 @@ public class AnimParms
     /// 拾取与放下东西
     /// </summary>
     public static string Pickup = "Armed";
+
+    /// <summary>
+    /// 跳跃
+    /// </summary>
+    public static string Jump = "Jump";
+    public static string Land = "Land";
+    public static string Roll = "roll";
+
+
+    public static string horizontal = "horizontal";
+    public static string vertical = "vertical";
+
+    public static string aiming = "Armed";
+    public static string fire = "Shoot";
+
+    public static string gethurt = "GetHurt";
+    public static string resume = "Resume";
 }
 
 

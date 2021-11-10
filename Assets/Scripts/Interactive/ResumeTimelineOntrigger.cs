@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ResumeTimelineOntrigger : MonoBehaviour
 {
+
+    public timelinename timelinename;
+
     public enum resumestate
     {
         resumeonenter, resumeonexit
@@ -16,7 +19,7 @@ public class ResumeTimelineOntrigger : MonoBehaviour
         if(other.gameObject.tag=="Player")
         {
             if (state == resumestate.resumeonenter)
-                TimelineManager.GetInstance().ResumeTimeLine();
+                TimelineManager.GetInstance().ResumeTimeline(timelinename.ToString());
         }
     }
 
@@ -25,7 +28,7 @@ public class ResumeTimelineOntrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             if (state == resumestate.resumeonexit)
-                TimelineManager.GetInstance().ResumeTimeLine();
+                TimelineManager.GetInstance().ResumeTimeline(timelinename.ToString());
         }
     }
 }

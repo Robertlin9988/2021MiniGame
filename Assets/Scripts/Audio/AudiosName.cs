@@ -9,9 +9,13 @@ public class AudiosName : MonoBehaviour
     public static string wakeup = "wakeup";
     public static string washingwater = "washingwater";
     public static string continuebutton = "continuebutton";
+    public static string buttonclicked = "buttonclicked";
     public static string metrosound = "metrosound";
     public static string ruinbgm = "ruinbgm";
     public static string walkstep = "walkstep";
+    public static string charged = "charged";
+    public static string fallhit = "fallhit";
+    public static string playerhurt = "playerhurt";
 
 
     public enum audioname

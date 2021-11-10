@@ -37,5 +37,25 @@ public enum KeyEventName
     /// <summary>
     /// 放置键
     /// </summary>
-    放置键
+    放置键,
+    /// <summary>
+    /// 跳跃键
+    /// </summary>
+    跳跃键,
+    /// <summary>
+    /// 开火键
+    /// </summary>
+    开火键,
+    /// <summary>
+    /// 瞄准键
+    /// </summary>
+    瞄准键,
+    /// <summary>
+    /// 冲刺键
+    /// </summary>
+    冲刺键,
+    /// <summary>
+    /// 返回键
+    /// </summary>
+    返回键
 }

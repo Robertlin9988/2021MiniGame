@@ -30,9 +30,37 @@ public class PanelName
     //name of paperpanel
     public static string paperpanel = "paperpanel";
 
+    //name of paperpanel
+    public static string sentencepanel = "sentencepanel";
+
+    //name of aim panel
+    public static string aimpanel = "AimPanel";
+
+    //name of bullet panel
+    public static string bulletpanel = "BulletPanel";
+
+    //name of pause panel
+    public static string pausepanel = "PausePanel";
+    public static string continuebutton = "Continue";
+    public static string backbutton = "Backtomainmenu";
+
+    //name of start panel
+    public static string startpanel = "StartMenuPanel";
+    public static string start = "Start";
+    public static string quit = "Quite";
+
+    //name of Instruction panel
+    public static string instructionpanel = "InstructionPanel";
+
+    //name of hp panel
+    public static string hppanel = "HpPanel";
+
+    //name of enemy hp panel
+    public static string enemyhppanel = "EnemyHpPanel";
+
+
     //continue key
     public static KeyCode continuekey = KeyCode.Space;
-
     public static KeyCode interactivekey = KeyCode.E;
 
 }

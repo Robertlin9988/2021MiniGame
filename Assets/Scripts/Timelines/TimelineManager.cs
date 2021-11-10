@@ -9,7 +9,13 @@ public enum timelinename
 {
     MirrorBreak1,
     MirrorBreak2,
-    WakeUp
+    MirrorBreak3,
+    ending,
+    WakeUp,
+    Die,
+    Win,
+    Intunnel,
+    TouchMirror3
 }
 
 [Serializable]
@@ -37,8 +43,6 @@ public class TimelineManager : MonoBehaviour
             directordic.Add(director.name.ToString(), director.director);
         }
     }
-
-
 
 
     public void PauseTimeScale()
@@ -70,7 +74,10 @@ public class TimelineManager : MonoBehaviour
 
     public void PauseTimeLine()
     {
-        currentdirector.playableGraph.GetRootPlayable(0).SetSpeed(0d);
+        if (currentdirector != null)
+        {
+            currentdirector.playableGraph.GetRootPlayable(0).SetSpeed(0d);
+        }
     }
 
     /// <summary>
@@ -85,14 +92,49 @@ public class TimelineManager : MonoBehaviour
         currentdirector.playableGraph.GetRootPlayable(0).SetSpeed(0d);
     }
 
+    /// <summary>
+    /// playonawake 的timeline需要传入director初始化currentdirector
+    /// </summary>
+    /// <param name="director"></param>
+    public void ResumeTimeLine(PlayableDirector director)
+    {
+        currentdirector = director;
+        if (currentdirector.playableGraph.Equals(default(PlayableGraph)) == false && currentdirector.playableGraph.IsPlaying())
+        {
+            currentdirector.playableGraph.GetRootPlayable(0).SetSpeed(1d);
+        }
+    }
+
+
+
+    public void ResumeTimeline(string name)
+    {
+        if (directordic.ContainsKey(name))
+        {
+            currentdirector = directordic[name];
+            if(currentdirector.playableGraph.Equals(default(PlayableGraph))==false && currentdirector.playableGraph.IsPlaying())
+            {
+                currentdirector.playableGraph.GetRootPlayable(0).SetSpeed(1d);
+            }
+        }
+    }
+
+
     public void ResumeTimeLine()
     {
-        //currentdirector.Resume();
-        currentdirector.playableGraph.GetRootPlayable(0).SetSpeed(1d);
+        if(currentdirector!=null)
+        {
+            //currentdirector.Resume();
+            currentdirector.playableGraph.GetRootPlayable(0).SetSpeed(1d);
+        }
     }
+
 
     public void StopTimeLine()
     {
-        currentdirector.Stop();
+        if (currentdirector != null)
+        {
+            currentdirector.Stop();
+        }
     }
 }

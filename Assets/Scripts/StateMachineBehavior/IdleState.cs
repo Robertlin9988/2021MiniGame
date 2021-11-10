@@ -9,6 +9,7 @@ public class IdleState : StateData
 
     void InputDetect()
     {
+        Debug.Log("crouch");
         anim.SetBool(AnimParms.IsCouching, true);
     }
 
